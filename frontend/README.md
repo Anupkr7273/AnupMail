@@ -1,12 +1,36 @@
-# React + Vite
+AnupMail - Email Client Application
+Project Overview
+AnupMail is a modern, responsive email client application built with React that allows users to send, receive, and manage emails. It features a clean, intuitive interface with functionality similar to popular email services.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+Email Management: Send, receive, and organize emails
+Folder System: Inbox, Sent, and Trash folders
+Read/Unread Status: Visual indicators for unread messages
+Email Threads: View individual email details with full content
 
-Currently, two official plugins are available:
+Technologies Used
+Frontend: React, React Router DOM, Axios
+Styling: Tailwind CSS
+Authentication: JWT (JSON Web Tokens)
+Backend: Node.js, Express 
+Database: MongoDB Atlas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Installation & Setup
+Node.js (v14 or higher)
+npm 
+Backend server running on localhost:5000
 
-## Expanding the ESLint configuration
+Frontend Setup
+Clone the repository
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+git clone <repository-url>
+cd anupmail-frontend
+
+Install dependencies
+npm install
+
+Start the development server
+npm run dev
+
+Open your browser
+Navigate to http://localhost:3000
