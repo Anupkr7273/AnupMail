@@ -1,36 +1,53 @@
-AnupMail - Email Client Application
+# AnupMail - Email Client Application
 Project Overview
 AnupMail is a modern, responsive email client application built with React that allows users to send, receive, and manage emails. It features a clean, intuitive interface with functionality similar to popular email services.
 
-Features
+# Features
 Email Management: Send, receive, and organize emails
 Folder System: Inbox, Sent, and Trash folders
 Read/Unread Status: Visual indicators for unread messages
 Email Threads: View individual email details with full content
 
-Technologies Used
+# Technologies Used
 Frontend: React, React Router DOM, Axios
 Styling: Tailwind CSS
 Authentication: JWT (JSON Web Tokens)
 Backend: Node.js, Express 
 Database: MongoDB Atlas
 
-Installation & Setup
-Node.js (v14 or higher)
-npm 
-Backend server running on localhost:5000
+# Installation
 
-Frontend Setup
-Clone the repository
+# Clone the repository:
 
-git clone <repository-url>
-cd anupmail-frontend
+git clone https://github.com/Anupkr7273/AnupMail.git
+cd AnupMail
 
-Install dependencies
+
+# Install dependencies for both frontend and backend:
+
+cd backend
+npm install
+cd ../frontend
 npm install
 
-Start the development server
+
+# Create a .env file in the backend with the following variables:
+
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+
+
+# Start the backend server:
+cd backend
 npm run dev
 
-Open your browser
-Navigate to http://localhost:3000
+
+# Start the frontend server:
+cd frontend
+npm run dev
+
+
+# Open the application in your browser at:
+
+http://localhost:5173
