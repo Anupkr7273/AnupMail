@@ -1,4 +1,3 @@
-// src/routes/emails.js
 import express from 'express';
 import { check } from 'express-validator';
 import { auth } from '../middleware/auth.js';
@@ -9,13 +8,13 @@ import {
 
 const router = express.Router();
 
-router.post('/send', [auth, check('to', 'Valid recipient email required').isEmail()], sendEmail);
+router.post('/send', [auth, check('to', 'Please enter valid email').isEmail()], sendEmail);
 router.get('/inbox', auth, getInbox);
 router.get('/sent', auth, getSent);
 router.get('/trash', auth, getTrash);
 router.get('/:id', auth, getEmailById);
 router.put('/read/:id', auth, markRead);
 router.put('/trash/:id', auth, moveToTrash);
-router.delete('/:id', auth, deletePermanently);
+router.delete('/delete/:id', auth, deletePermanently);
 
 export default router;

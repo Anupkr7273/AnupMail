@@ -1,4 +1,3 @@
-// src/index.js
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
@@ -16,7 +15,6 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/emails', emailRoutes);
 
-// simple error handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ message: 'Server error' });

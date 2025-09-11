@@ -1,4 +1,3 @@
-// src/controllers/emailController.js
 import { validationResult } from 'express-validator';
 import Email from '../models/Email.js';
 import User from '../models/User.js';
@@ -17,8 +16,6 @@ export const sendEmail = async (req, res) => {
     if (!recipient) {
       return res.status(400).json({ message: "Recipient not found" });
     }
-
-    // Save sender copy
     const sentCopy = new Email({
       from,
       to,
@@ -30,7 +27,6 @@ export const sendEmail = async (req, res) => {
     });
     await sentCopy.save();
 
-    // Save recipient copy
     const inboxCopy = new Email({
       from,
       to,
@@ -42,7 +38,6 @@ export const sendEmail = async (req, res) => {
     });
     await inboxCopy.save();
 
-    // ✅ return the inbox copy as response
     res.status(201).json({
       message: "Email sent successfully",
       mail: inboxCopy,
